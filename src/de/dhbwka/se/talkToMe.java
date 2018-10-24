@@ -20,6 +20,9 @@ public class talkToMe
             case "Hello" :
                 System.out.println("Hello, master");;
                 break;
+            case "Bye" :
+                System.out.println("Bye, master");;
+                break;
 
             default :
                 System.out.println("I can't read that");
