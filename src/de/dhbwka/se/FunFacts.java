@@ -8,7 +8,7 @@ public class FunFacts
 
     public void randomFact()
     {
-        int rnd = random.nextInt(3);
+        int rnd = random.nextInt(4);
 
         switch (rnd)
         {
@@ -21,6 +21,9 @@ public class FunFacts
                 break;
             case 2 :
                 System.out.println("I would never lie to you");
+                break;
+            case 3 :
+                System.out.println("Cake");
                 break;
 
             default :
