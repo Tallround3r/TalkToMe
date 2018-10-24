@@ -6,6 +6,9 @@ public class talkToMe
 {
     static String input;
     static Scanner scanInput;
+    static GreetDismiss conversation;
+    static FunFacts funcasts;
+    static Praise praise;
 
     private static void read()
     {
@@ -18,20 +21,33 @@ public class talkToMe
         switch (input)
         {
             case "Hello" :
-                System.out.println("Hello, master");;
+                conversation.sayHello();
+                break;
+            case "Hey" :
+                conversation.sayHey();;
                 break;
             case "Bye" :
-                System.out.println("Bye, master");;
+                conversation.sayBye();;
+                return;
+            case "Tell me something" :
+                funcasts.randomFact();
                 break;
-
+            case "Be nice" :
+                praise.praise();
+                break;
+            
             default :
                 System.out.println("I can't read that");
                 break;
         }
+        read();
     }
     public static void main(String[] args)
     {
         scanInput = new Scanner(System.in);
+        conversation = new GreetDismiss();
+        funcasts = new FunFacts();
+        praise = new Praise();
         read();
     }
 }
